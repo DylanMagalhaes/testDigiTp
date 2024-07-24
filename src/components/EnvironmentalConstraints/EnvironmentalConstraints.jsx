@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './EnvironmentalConstraints.css';
+import Title from '../Title/Title';
 
 function EnvironmentalConstraints() {
   const constraintsArray = [
@@ -27,7 +28,7 @@ function EnvironmentalConstraints() {
 
   return (
     <>
-      <h2 className="title">Contraintes environnant le chantier :</h2>
+      <Title text="Contraintes environnant le chantier :" />
       <div className="container">
         <p className="subtitle">Sélection de(s) contrainte(s):</p>
         <ul className="constraintsList">
