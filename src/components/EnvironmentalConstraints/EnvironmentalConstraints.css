@@ -6,12 +6,6 @@ h2 {
   font-weight: 800;
 }
 
-.container {
-  background-color: var(--light-blue);
-  padding: 12px 24px;
-  display: flex;
-}
-
 .constraintsList li {
   list-style: none;
 }
