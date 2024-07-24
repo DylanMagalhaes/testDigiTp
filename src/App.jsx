@@ -1,7 +1,12 @@
 import './App.css';
+import EnvironmentalConstraints from './components/EnvironmentalConstraints/EnvironmentalConstraints';
 
 function App() {
-  return <h1> digi tp </h1>;
+  return (
+    <div className="app">
+      <EnvironmentalConstraints />
+    </div>
+  );
 }
 
 export default App;

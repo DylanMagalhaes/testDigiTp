@@ -1,0 +1,21 @@
+@import '../../assets/variables.css';
+
+p,
+li,
+h2 {
+  font-weight: 800;
+}
+
+.title {
+  color: var(--yellow);
+}
+
+.container {
+  background-color: var(--light-blue);
+  padding: 12px 24px;
+  display: flex;
+}
+
+.constraintsList li {
+  list-style: none;
+}
