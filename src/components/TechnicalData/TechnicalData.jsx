@@ -16,9 +16,11 @@ function TechnicalData({ handleOpenModal, selectedIP }) {
           <p className="subtitle">IP ajoutés :</p>
           <ul>
             {selectedIP.map(ip => (
-              <li key={ip.code}>
-                <TiDelete size={24} />
-                {ip.code} : {ip.description}{' '}
+              <li className="ip" key={ip.code}>
+                <TiDelete size={24} className="delete-icon" />
+                <span>
+                  {ip.code} : {ip.description}
+                </span>
               </li>
             ))}
           </ul>
