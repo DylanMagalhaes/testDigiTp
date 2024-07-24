@@ -22,7 +22,7 @@ function ContractualAspects() {
     <>
       <Title text="Aspects contractuels" />
       <Content>
-        <p className="subtitle">Nature du projet:</p>
+        <p className="subtitle">Nature du projet :</p>
         <div className="dropdown">
           <div className="dropdown-input" onClick={toggleDropdown}>
             {selectedItem} <span className="dropdown-arrow">&#9662;</span>

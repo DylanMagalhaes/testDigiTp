@@ -31,7 +31,7 @@ function EnvironmentalConstraints() {
     <>
       <Title text="Contraintes environnant le chantier :" />
       <Content>
-        <p className="subtitle">Sélection de(s) contrainte(s):</p>
+        <p className="subtitle">Sélection de(s) contrainte(s) :</p>
         <ul className="constraintsList">
           {constraintsArray.map((constraint, index) => (
             <li key={index}>
