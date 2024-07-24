@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 import './AddButton.css';
 
-function AddButton({ text }) {
+function AddButton({ text, handleOpenModal }) {
   return (
-    <button className="addButton" type="button">
+    <button onClick={handleOpenModal} className="addButton" type="button">
       <span>+</span>
       {text}
     </button>

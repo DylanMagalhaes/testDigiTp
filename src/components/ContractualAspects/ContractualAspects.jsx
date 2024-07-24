@@ -20,7 +20,7 @@ function ContractualAspects() {
 
   return (
     <>
-      <Title text="Aspects contractuels" />
+      <Title text="Aspects contractuels :" />
       <Content>
         <p className="subtitle">Nature du projet :</p>
         <div className="dropdown">
