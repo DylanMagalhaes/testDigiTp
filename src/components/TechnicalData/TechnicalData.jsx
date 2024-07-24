@@ -9,11 +9,12 @@ function TechnicalData() {
     <>
       <Title text="Données techniques :" />
       <Content>
-        <p className="subtitle">IP ajoutés :</p>
-        <AddButton text="Ajouter un IP" />
+        <div>
+          <p className="subtitle">IP ajoutés :</p>
+          <AddButton text="Ajouter un IP" />
+        </div>
       </Content>
     </>
   );
 }
-
 export default TechnicalData;

@@ -1,9 +1,11 @@
+/* eslint-disable react/prop-types */
 import './AddButton.css';
 
 function AddButton({ text }) {
   return (
     <button className="addButton" type="button">
-      <span>+</span>{text}
+      <span>+</span>
+      {text}
     </button>
   );
 }
