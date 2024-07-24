@@ -1,0 +1,5 @@
+.content {
+  background-color: var(--light-blue);
+  padding: 8px 16px;
+  display: flex;
+}

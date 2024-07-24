@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './EnvironmentalConstraints.css';
+import Title from '../Title/Title';
+import Content from '../ContentComponent/Content';
 
 function EnvironmentalConstraints() {
   const constraintsArray = [
@@ -27,8 +29,8 @@ function EnvironmentalConstraints() {
 
   return (
     <>
-      <h2 className="title">Contraintes environnant le chantier :</h2>
-      <div className="container">
+      <Title text="Contraintes environnant le chantier :" />
+      <Content>
         <p className="subtitle">Sélection de(s) contrainte(s):</p>
         <ul className="constraintsList">
           {constraintsArray.map((constraint, index) => (
@@ -43,7 +45,7 @@ function EnvironmentalConstraints() {
             </li>
           ))}
         </ul>
-      </div>
+      </Content>
     </>
   );
 }
