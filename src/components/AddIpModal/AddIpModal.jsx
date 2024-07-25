@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Content from '../ContentComponent/Content';
 import Title from '../Title/Title';
+import './AddIpModal.css';
 
 function AddIPModal({ selectedIP, setSelectedIP, onClose }) {
   const [isOpen, setIsOpen] = useState(false);
