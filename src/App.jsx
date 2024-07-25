@@ -6,19 +6,30 @@ import TechnicalData from './components/TechnicalData/TechnicalData';
 import Modal from './components/Modal/Modal';
 import AddIPModal from './components/AddIpModal/AddIpModal';
 import OtherServices from './components/OtherServices/OtherServices';
+import AddElementModal from './components/AddElementModal/AddElementModal';
 
 function App() {
-  const [showModal, setShowModal] = useState(false);
+  const [showAddIPModal, setShowAddIPModal] = useState(false);
+  const [showAddElementModal, setShowAddElementModal] = useState(false);
   const [selectedConstraints, setSelectedConstraints] = useState([]);
   const [projectType, setProjectType] = useState('Sélectionner la nature du projet');
   const [selectedIP, setSelectedIP] = useState([]);
+  const [otherElements, setOtherElements] = useState([]);
 
-  const handleOpenModal = () => {
-    setShowModal(true);
+  const handleOpenAddIPModal = () => {
+    setShowAddIPModal(true);
   };
 
-  const handleCloseModal = () => {
-    setShowModal(false);
+  const handleCloseAddIPModal = () => {
+    setShowAddIPModal(false);
+  };
+
+  const handleOpenAddElementModal = () => {
+    setShowAddElementModal(true);
+  };
+
+  const handleCloseAddElementModal = () => {
+    setShowAddElementModal(false);
   };
 
   const printFormData = () => {
@@ -26,7 +37,8 @@ function App() {
       `
       Contraintes environant le chantier :${selectedConstraints.join(',')}\n
       Aspects contractuels: ${projectType}\n
-      Données techniques : ${JSON.stringify(selectedIP)}
+      Données techniques : ${JSON.stringify(selectedIP)}\n
+      Autres éléments : ${JSON.stringify(otherElements)}
       `,
     );
   };
@@ -42,20 +54,31 @@ function App() {
         setProjectType={setProjectType}
       />
       <TechnicalData
-        handleOpenModal={handleOpenModal}
+        handleOpenModal={handleOpenAddIPModal}
         selectedIP={selectedIP}
         setSelectedIP={setSelectedIP}
       />
-      <Modal show={showModal} onClose={handleCloseModal}>
+      <Modal show={showAddIPModal} onClose={handleCloseAddIPModal}>
         <AddIPModal
           selectedIP={selectedIP}
           setSelectedIP={setSelectedIP}
-          onClose={handleCloseModal}
+          onClose={handleCloseAddIPModal}
         />
       </Modal>
-      <OtherServices handleOpenModal={handleOpenModal} />
-      <button type="button" onClick={printFormData}>
-        print
+      <OtherServices
+        handleOpenModal={handleOpenAddElementModal}
+        otherElements={otherElements}
+        setOtherElements={setOtherElements}
+      />
+      <Modal show={showAddElementModal} onClose={handleCloseAddElementModal}>
+        <AddElementModal
+          otherElements={otherElements}
+          setOtherElements={setOtherElements}
+          onClose={handleCloseAddElementModal}
+        />
+      </Modal>
+      <button className='dl-button' type="button" onClick={printFormData}>
+        Finalisation et téléchargement
       </button>
     </div>
   );

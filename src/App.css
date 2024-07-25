@@ -11,3 +11,14 @@ body {
   background-color: var(--dark-blue);
   padding: 12px 24px;
 }
+
+.dl-button {
+  background-color: rgb(45, 24, 77);
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

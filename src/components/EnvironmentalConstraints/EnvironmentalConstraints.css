@@ -9,3 +9,8 @@ h2 {
 .constraintsList li {
   list-style: none;
 }
+
+#constraints-subtitle {
+  margin-right: 12px;
+  margin-top: 0;
+}

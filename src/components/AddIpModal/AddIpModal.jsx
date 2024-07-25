@@ -37,12 +37,13 @@ function AddIPModal({ selectedIP, setSelectedIP, onClose }) {
   ];
 
   return (
-    <div>
-      <Title text="Ajouter un IP" />
+    <>
+      <Title text="Ajouter un IP :" />
       <Content>
         <div className="modal-dropdown">
           <div className="modal-dropdown-input" onClick={toggleDropdown}>
-            1. Ouvrages d'art et de génie civile industriel (béton et acier-béton)
+            1. Ouvrages d'art et de génie civile industriel (béton et
+            acier-béton)
             <span className="modal-dropdown-arrow">&#9662;</span>
           </div>
           {isOpen && (
@@ -64,7 +65,7 @@ function AddIPModal({ selectedIP, setSelectedIP, onClose }) {
           )}
         </div>
       </Content>
-    </div>
+    </>
   );
 }
 

@@ -6,11 +6,7 @@ import './TechnicalData.css';
 import AddButton from '../AddButton/AddButton';
 import { TiDelete } from "react-icons/ti";
 
-function TechnicalData({
-  handleOpenModal,
-  selectedIP,
-  setSelectedIP,
-}) {
+function TechnicalData({ handleOpenModal, selectedIP, setSelectedIP }) {
   const deleteIp = ipCode => {
     const updatedIp = selectedIP.filter(ip => ip.code !== ipCode);
     setSelectedIP(updatedIp);

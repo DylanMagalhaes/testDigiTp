@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from 'react';
 import './EnvironmentalConstraints.css';
 import Title from '../Title/Title';
 import Content from '../ContentComponent/Content';
@@ -26,17 +25,18 @@ function EnvironmentalConstraints({
         selectedConstraints.filter(constraint => constraint !== value),
       );
     }
-    console.log(selectedConstraints);
   };
 
   return (
     <>
       <Title text="Contraintes environnant le chantier :" />
       <Content>
-        <p className="subtitle">Sélection de(s) contrainte(s) :</p>
+        <p id="constraints-subtitle" className="subtitle">
+          Sélection de(s) contrainte(s) :
+        </p>
         <ul className="constraintsList">
-          {constraintsArray.map((constraint, index) => (
-            <li key={index}>
+          {constraintsArray.map(constraint => (
+            <li key={constraint}>
               <input
                 onChange={handleCheckboxChange}
                 className="checkbox"
