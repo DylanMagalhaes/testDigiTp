@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import Content from '../ContentComponent/Content';
 import Title from '../Title/Title';
 import './AddElementModal.css';
-import AddButton from '../AddButton/AddButton';
 
 function AddElementModal({ otherElements, setOtherElements, onClose }) {
   const [newElement, setNewElement] = useState('');
@@ -31,14 +30,13 @@ function AddElementModal({ otherElements, setOtherElements, onClose }) {
           className="add-element-input"
           type="text"
         />
-        <AddButton
-          text="Ajouter"
+        <button
           type="button"
           onClick={handleAddElement}
           className="add-element-button"
         >
           Ajouter
-        </AddButton>
+        </button>
       </Content>
     </>
   );
