@@ -1,9 +1,13 @@
+/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import './EnvironmentalConstraints.css';
 import Title from '../Title/Title';
 import Content from '../ContentComponent/Content';
 
-function EnvironmentalConstraints() {
+function EnvironmentalConstraints({
+  selectedConstraints,
+  setSelectedConstraints,
+}) {
   const constraintsArray = [
     'Milieu urbain',
     'Milieu non urbain',
@@ -12,8 +16,6 @@ function EnvironmentalConstraints() {
     'Encombrement dû à des réseaux (eau, électricité ...)',
     "Exiguïté de l'espace réservé au chantier",
   ];
-
-  const [selectedConstraints, setSelectedConstraints] = useState([]);
 
   const handleCheckboxChange = e => {
     const { value, checked } = e.target;
