@@ -1,6 +1,6 @@
-/* eslint-disable react/prop-types */
 import './Title.css';
 
+// eslint-disable-next-line react/prop-types
 function Title({ text }) {
   return <h2 className="title">{text}</h2>;
 }

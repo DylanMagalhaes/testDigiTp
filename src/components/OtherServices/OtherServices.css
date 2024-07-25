@@ -1,0 +1,15 @@
+.element {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.no-elements {
+  font-weight: 300;
+  font-style: italic;
+  margin: 8px 0;
+  margin-right: 12px;
+}
+
+.container-element-button {
+  display: flex;
+}

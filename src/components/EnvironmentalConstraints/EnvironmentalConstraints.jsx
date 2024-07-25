@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+/* eslint-disable react/prop-types */
 import './EnvironmentalConstraints.css';
 import Title from '../Title/Title';
 import Content from '../ContentComponent/Content';
 
-function EnvironmentalConstraints() {
+function EnvironmentalConstraints({
+  selectedConstraints,
+  setSelectedConstraints,
+}) {
   const constraintsArray = [
     'Milieu urbain',
     'Milieu non urbain',
@@ -12,8 +15,6 @@ function EnvironmentalConstraints() {
     'Encombrement dû à des réseaux (eau, électricité ...)',
     "Exiguïté de l'espace réservé au chantier",
   ];
-
-  const [selectedConstraints, setSelectedConstraints] = useState([]);
 
   const handleCheckboxChange = e => {
     const { value, checked } = e.target;
@@ -24,17 +25,18 @@ function EnvironmentalConstraints() {
         selectedConstraints.filter(constraint => constraint !== value),
       );
     }
-    console.log(selectedConstraints);
   };
 
   return (
     <>
       <Title text="Contraintes environnant le chantier :" />
       <Content>
-        <p className="subtitle">Sélection de(s) contrainte(s):</p>
+        <p id="constraints-subtitle" className="subtitle">
+          Sélection de(s) contrainte(s) :
+        </p>
         <ul className="constraintsList">
-          {constraintsArray.map((constraint, index) => (
-            <li key={index}>
+          {constraintsArray.map(constraint => (
+            <li key={constraint}>
               <input
                 onChange={handleCheckboxChange}
                 className="checkbox"
