@@ -12,7 +12,9 @@ function App() {
   const [showAddIPModal, setShowAddIPModal] = useState(false);
   const [showAddElementModal, setShowAddElementModal] = useState(false);
   const [selectedConstraints, setSelectedConstraints] = useState([]);
-  const [projectType, setProjectType] = useState('Sélectionner la nature du projet');
+  const [projectType, setProjectType] = useState(
+    'Sélectionner la nature du projet',
+  );
   const [selectedIP, setSelectedIP] = useState([]);
   const [otherElements, setOtherElements] = useState([]);
 
@@ -77,7 +79,7 @@ function App() {
           onClose={handleCloseAddElementModal}
         />
       </Modal>
-      <button className='dl-button' type="button" onClick={printFormData}>
+      <button className="dl-button" type="button" onClick={printFormData}>
         Finalisation et téléchargement
       </button>
     </div>

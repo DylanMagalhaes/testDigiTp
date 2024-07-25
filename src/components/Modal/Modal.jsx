@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { TiDelete } from 'react-icons/ti';
 import './Modal.css';
 
 function Modal({ show, onClose, children }) {
@@ -10,9 +11,7 @@ function Modal({ show, onClose, children }) {
   return (
     <div className="modal-overlay">
       <div className="modal-content">
-        <button className="modal-close-button" onClick={onClose}>
-          &times;
-        </button>
+        <TiDelete onClick={onClose} size={24} className="delete-icon" />
         {children}
       </div>
     </div>

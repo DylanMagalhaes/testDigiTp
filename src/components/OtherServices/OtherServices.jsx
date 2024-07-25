@@ -19,22 +19,27 @@ function OtherServices({ handleOpenModal, otherElements, setOtherElements }) {
       <Content>
         <div>
           <p className="subtitle">Elements ajoutés :</p>
-          <ul>
-            {otherElements.map((element, index) => (
-              <li className="element" key={index}>
-                <button
-                  type="button"
-                  onClick={() => deleteElement(index)}
-                  className="delete-icon-button"
-                  aria-label={`Supprimer ${element}`}
-                >
-                  <TiDelete size={24} className="delete-icon" />
-                </button>
-                {element}
-              </li>
-            ))}
-          </ul>
-          <AddButton handleOpenModal={handleOpenModal} text="Ajouter un élément" />
+
+          {otherElements.length === 0 ? (
+            <p className="no-elements">Aucun élément ajouté pour le moment.</p>
+          ) : (
+            <ul>
+              {otherElements.map((element, index) => (
+                <li className="element" key={element}>
+                  <TiDelete
+                    size={24}
+                    className="delete-icon"
+                    onClick={() => deleteElement(index)}
+                  />
+                  {element}
+                </li>
+              ))}
+            </ul>
+          )}
+          <AddButton
+            handleOpenModal={handleOpenModal}
+            text="Ajouter un élément"
+          />
         </div>
       </Content>
     </>
