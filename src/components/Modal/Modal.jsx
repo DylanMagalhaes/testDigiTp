@@ -10,10 +10,7 @@ function Modal({ show, onClose, children }) {
 
   return (
     <div className="modal-overlay">
-      <div className="modal-content">
-        <TiDelete onClick={onClose} size={24} className="delete-icon" />
-        {children}
-      </div>
+      <div className="modal-content">{children}</div>
     </div>
   );
 }

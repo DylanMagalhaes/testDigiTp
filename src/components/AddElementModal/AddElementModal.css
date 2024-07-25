@@ -14,3 +14,7 @@
   color: black;
   margin-right: 12px;
 }
+
+.add-element-button {
+  background-color: var(--pink);
+}

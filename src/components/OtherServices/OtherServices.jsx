@@ -26,6 +26,11 @@ function OtherServices({ handleOpenModal, otherElements, setOtherElements }) {
             <ul>
               {otherElements.map((element, index) => (
                 <li className="element" key={index}>
+                  <TiDelete
+                    size={24}
+                    className="delete-icon"
+                    onClick={() => deleteElement(index)}
+                  />
                   {element}
                 </li>
               ))}
