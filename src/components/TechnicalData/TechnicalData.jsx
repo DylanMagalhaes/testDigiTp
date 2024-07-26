@@ -4,7 +4,7 @@ import Content from '../ContentComponent/Content';
 import Title from '../Title/Title';
 import './TechnicalData.css';
 import AddButton from '../AddButton/AddButton';
-import IpItem from '../IpItem/IpItem';  // Assurez-vous d'importer IpItem correctement
+import IpItem from '../IpItem/IpItem';
 
 function TechnicalData({ handleOpenModal, selectedIP, setSelectedIP }) {
   const handleDeleteIp = ipCode => {

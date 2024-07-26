@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Content from '../ContentComponent/Content';
 import Title from '../Title/Title';
 import './AddIpModal.css';
+import { getAllIpItems } from '../../data/ipItemsRepository';
 
 function AddIPModal({ selectedIP, setSelectedIP, onClose }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,24 +18,7 @@ function AddIPModal({ selectedIP, setSelectedIP, onClose }) {
     onClose();
   };
 
-  const ipItems = [
-    {
-      code: '1121',
-      description: 'Ouvrage de technicité moyenne à haute ou ouvrage groupés',
-      quantity: null,
-    },
-    {
-      code: '1131',
-      description:
-        "Ouvrage de technicité Courante: Autres ouvrages courants de béton armé ou mixts acier-béton (à l'exclusion des ouvrages nautique)",
-      quantity: null,
-    },
-    {
-      code: '1141',
-      description: 'Ouvrage de technicité moyenne à haute ou ouvrage groupés',
-      quantity: null,
-    },
-  ];
+  const ipItems = getAllIpItems();
 
   return (
     <>
