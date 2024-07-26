@@ -51,7 +51,7 @@ function AddIPModal({ selectedIP, setSelectedIP, onClose }) {
               {ipItems.map(ip => (
                 <li key={ip.code} className="modal-item">
                   <p>{ip.code}</p>
-                  <p>{ip.description}</p>
+                  <p className="ip-description">{ip.description}</p>
                   <button
                     type="button"
                     className="littleAddButton"
